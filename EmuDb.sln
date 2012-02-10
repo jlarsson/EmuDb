@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuDb", "EmuDb\EmuDb.csproj", "{81B79B62-8CDA-4563-8917-BE55A5F35B79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuDb.Tests", "EmuDb.Tests\EmuDb.Tests.csproj", "{F7FCB023-BEB3-429A-B75F-48A03E19DC66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81B79B62-8CDA-4563-8917-BE55A5F35B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B79B62-8CDA-4563-8917-BE55A5F35B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B79B62-8CDA-4563-8917-BE55A5F35B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B79B62-8CDA-4563-8917-BE55A5F35B79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FCB023-BEB3-429A-B75F-48A03E19DC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FCB023-BEB3-429A-B75F-48A03E19DC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FCB023-BEB3-429A-B75F-48A03E19DC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FCB023-BEB3-429A-B75F-48A03E19DC66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
