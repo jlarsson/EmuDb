@@ -9,14 +9,14 @@ namespace EmuDb.Tests.Skiplists
         [Test]
         public void ThrowsOnDuplicateKey()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>(), KeyStrategy.Unique) {{1, 1}};
+            var list = new Skiplist<int, int>(KeyStrategy.Unique) {{1, 1}};
             Assert.Throws<DuplicateKeyException>(() => list.Add(1, 2));
         }
 
         [Test]
         public void IndexSetterUpdatesExisting()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>()) {{1, 1}};
+            var list = new Skiplist<int, int>(KeyStrategy.Unique) { { 1, 1 } };
 
             list[1] = 123;
 
@@ -26,7 +26,7 @@ namespace EmuDb.Tests.Skiplists
         [Test]
         public void IndexSetterAddsIfMissing()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>());
+            var list = new Skiplist<int, int>(KeyStrategy.Unique);
 
             list[1] = 123;
 

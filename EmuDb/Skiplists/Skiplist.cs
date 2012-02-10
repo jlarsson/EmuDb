@@ -9,7 +9,16 @@ namespace EmuDb.Skiplists
 {
     public class Skiplist<TKey, TValue> : ISkiplist<TKey, TValue>
     {
+        public Skiplist() : this(new SkiplistMemoryArena<TKey, TValue>())
+        {
+        }
+
         public Skiplist(ISkiplistArena<TKey, TValue> arena) : this(arena, Comparer<TKey>.Default, KeyStrategy.Unique)
+        {
+        }
+
+        public Skiplist(KeyStrategy keyStrategy)
+            : this(new SkiplistMemoryArena<TKey, TValue>(), keyStrategy)
         {
         }
 

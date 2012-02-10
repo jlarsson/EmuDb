@@ -11,7 +11,7 @@ namespace EmuDb.Tests.Skiplists
         [Test]
         public void Test()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>());
+            var list = new Skiplist<int, int>();
 
 
             var keys = Enumerable.Range(1, 40);

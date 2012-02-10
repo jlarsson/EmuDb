@@ -10,7 +10,7 @@ namespace EmuDb.Tests.Skiplists
         [Test]
         public void ValuesWithSameKeyAreAppendedInReverseOrder()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>(), KeyStrategy.Append) {{1, 1}, {1, 2}};
+            var list = new Skiplist<int, int>(KeyStrategy.Append) {{1, 1}, {1, 2}};
 
             Assert.That(new []{1,1},Is.EqualTo(list.Keys));
             Assert.That(new[] { 2,1 }, Is.EqualTo(list.Values));
@@ -19,7 +19,7 @@ namespace EmuDb.Tests.Skiplists
         [Test]
         public void IndexerReturnsLastAdded()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>(), KeyStrategy.Append) { { 1, 111 }, { 1, 234 } };
+            var list = new Skiplist<int, int>(KeyStrategy.Append) { { 1, 111 }, { 1, 234 } };
 
             Assert.That(234, Is.EqualTo(list[1]));
         }
@@ -27,7 +27,7 @@ namespace EmuDb.Tests.Skiplists
         [Test]
         public void IndexerUpdatesLastAdded()
         {
-            var list = new Skiplist<int, int>(new SkiplistMemoryArena<int, int>(), KeyStrategy.Append) { { 1, 123 }, { 1, 234 } };
+            var list = new Skiplist<int, int>(KeyStrategy.Append) { { 1, 123 }, { 1, 234 } };
 
             list[1] = 12345;
             Assert.That(list[1], Is.EqualTo(12345));
